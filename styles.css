@@ -1,0 +1,124 @@
+/* Body styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #f29292, #f9c9c9); /* Trendy gradient */
+    color: #222; /* Dark text */
+  }
+  
+  /* Calculator container styles */
+  .calculator {
+    display: grid;
+    grid-template-rows: auto 1fr 1fr 1fr 1fr auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 8px;
+    max-width: 400px; /* Slimmer width */
+    width: 90%;
+    background-color: #fff; /* Light background */
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: auto;
+    padding: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .calculator:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Display container styles */
+  .display {
+    grid-column: span 4;
+    grid-row: span 1;
+    background-color: #f7f7f7; /* Light gray background */
+    color: #222; /* Dark text */
+    font-size: 2em;
+    padding: 10px;
+    text-align: right;
+    overflow: hidden;
+  }
+  
+  /* Buttons container styles */
+  .btn {
+    background-color: #fff; /* White background */
+    color: #222; /* Dark text */
+    border: none;
+    padding: 15px;
+    font-size: 1.4em;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+  }
+  
+  .btn:hover {
+    background-color: #777575; /* Light gray on hover */
+    transform: scale(1.05);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Additional button classes for styling */
+  .operator {
+    background-color: #f29292; /* Trendy pink for operators */
+    color: #fff; /* White text */
+  }
+  
+  .equal {
+    background-color: #f29292; /* Trendy orange for equals */
+    color: #fff; /* White text */
+    grid-column: 4; /* Align to the right side */
+    font-size: 1.6em; /* Make slightly bigger */
+  }
+  
+  .operator-row,
+  .number-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 400px) {
+    .calculator {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  /* Remove unnecessary spaces */
+  .btn {
+    margin: 0;
+  }
+  
+/* Dark mode styles */
+body.dark-mode {
+  background: #212121;
+  color: #fff;
+}
+
+.calculator.dark-mode {
+  background-color: #333;
+}
+
+.display.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+.btn.dark-mode {
+  background-color: #424242;
+  color: #fff;
+}
+
+.btn.operator.dark-mode {
+  background-color: #545454;
+}
+
+.btn.equal.dark-mode {
+  background-color: #666;
+}
